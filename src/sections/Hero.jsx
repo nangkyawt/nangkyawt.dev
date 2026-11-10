@@ -1,6 +1,6 @@
-
 import { useEffect, useRef, useState } from "react";
 import profile from "../assets/myphoto.jpeg";
+import cv from "../assets/Nang_Kyawt_CV.pdf";
 
 function Hero({ darkMode }) {
   const [animate, setAnimate] = useState(false);
@@ -231,8 +231,8 @@ function Hero({ darkMode }) {
 
                 {/* Download CV */}
                 <a
-                  href="/Nang-Kyawt-CV.pdf"
-                  download
+                  href={cv}
+                  download="Nang-Kyawt-Hsu-Hlaing-CV.pdf"
                   className={`
                     group inline-flex shrink-0 items-center justify-center gap-1.5
                     whitespace-nowrap rounded-full border
