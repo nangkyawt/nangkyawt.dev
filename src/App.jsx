@@ -1,5 +1,6 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -10,7 +11,15 @@ import Contact from "./sections/Contact";
 import BackToTop from "./components/BackToTop";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  // Load saved theme from localStorage
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("darkMode") === "true";
+  });
+
+  // Save theme whenever it changes
+  useEffect(() => {
+    localStorage.setItem("darkMode", String(darkMode));
+  }, [darkMode]);
 
   return (
     <div
@@ -20,7 +29,10 @@ function App() {
           : "min-h-screen bg-[#FDFBF7] text-[#2C2A29]"
       }
     >
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Navbar
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
 
       <main>
         <Hero darkMode={darkMode} />
@@ -29,8 +41,9 @@ function App() {
         <Projects darkMode={darkMode} />
         <Certificates darkMode={darkMode} />
         <Contact darkMode={darkMode} />
-        < BackToTop darkMode={darkMode}/>
       </main>
+
+      <BackToTop darkMode={darkMode} />
     </div>
   );
 }
