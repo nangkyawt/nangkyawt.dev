@@ -7,6 +7,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Certificates from "./sections/Certificates";
 import Contact from "./sections/Contact";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,6 +29,7 @@ function App() {
         <Projects darkMode={darkMode} />
         <Certificates darkMode={darkMode} />
         <Contact darkMode={darkMode} />
+        < BackToTop darkMode={darkMode}/>
       </main>
     </div>
   );
