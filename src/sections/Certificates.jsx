@@ -11,7 +11,7 @@ function Certificates({ darkMode }) {
         "Completed an associate degree in Computer Science, covering programming, databases, algorithms, and core computer science fundamentals.",
       date: "2026",
       type: "Academic",
-      link: "https://drive.google.com/file/d/1lJCI3Hph7hx5UEjtQIZ4E0wsuPOGH_dY/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1BEHB02tKY9jL5CdN7PRQdl3EBYazQiUk/view?usp=sharing",
     },
     {
       title: "Thai Language — Basic",
