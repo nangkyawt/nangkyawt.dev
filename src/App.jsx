@@ -1,9 +1,12 @@
+
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
+import Certificates from "./sections/Certificates";
+import Contact from "./sections/Contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,11 +20,14 @@ function App() {
       }
     >
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+
       <main>
         <Hero darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Skills darkMode={darkMode} />
         <Projects darkMode={darkMode} />
+        <Certificates darkMode={darkMode} />
+        <Contact darkMode={darkMode} />
       </main>
     </div>
   );

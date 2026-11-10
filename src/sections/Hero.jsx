@@ -186,12 +186,12 @@ function Hero({ darkMode }) {
                 turning ideas into useful digital experiences.
               </p>
 
-              {/* Action buttons */}
+              {/* Action buttons - slightly smaller */}
               <div
                 className={`
                   mt-8 flex flex-row flex-nowrap items-center gap-2
                   transition-all duration-[900ms] delay-500 ease-out
-                  sm:gap-4
+                  sm:gap-3
                   ${
                     animate
                       ? "translate-y-0 opacity-100"
@@ -205,7 +205,7 @@ function Hero({ darkMode }) {
                   className="
                     group inline-flex shrink-0 items-center justify-center gap-1.5
                     whitespace-nowrap rounded-full bg-[#D97757]
-                    px-3 py-3 text-xs font-semibold text-white
+                    px-3 py-2.5 text-[11px] font-semibold text-white
                     shadow-[0_6px_20px_rgba(217,119,87,0.22)]
                     transition-all duration-300
                     hover:-translate-y-1 hover:bg-[#C76648]
@@ -213,14 +213,15 @@ function Hero({ darkMode }) {
                     focus-visible:outline-2
                     focus-visible:outline-offset-4
                     focus-visible:outline-[#D97757]
-                    sm:gap-3 sm:px-7 sm:py-3.5 sm:text-sm
+                    sm:gap-2.5 sm:px-5 sm:py-3 sm:text-xs
                   "
                 >
                   Explore My Work
+
                   <span
                     className="
-                      text-base transition-transform duration-300
-                      group-hover:translate-x-1 sm:text-lg
+                      text-sm transition-transform duration-300
+                      group-hover:translate-x-1 sm:text-base
                     "
                     aria-hidden="true"
                   >
@@ -235,13 +236,13 @@ function Hero({ darkMode }) {
                   className={`
                     group inline-flex shrink-0 items-center justify-center gap-1.5
                     whitespace-nowrap rounded-full border
-                    px-3 py-3 text-xs font-semibold
+                    px-3 py-2.5 text-[11px] font-semibold
                     transition-all duration-300
                     hover:-translate-y-1
                     focus-visible:outline-2
                     focus-visible:outline-offset-4
                     focus-visible:outline-[#D66887]
-                    sm:gap-2.5 sm:px-7 sm:py-3.5 sm:text-sm
+                    sm:gap-2 sm:px-5 sm:py-3 sm:text-xs
                     ${
                       darkMode
                         ? "border-[#E58BA0]/40 bg-white/[0.04] text-[#F5DCE4] hover:border-[#E58BA0] hover:bg-[#E58BA0]/10"
@@ -251,8 +252,8 @@ function Hero({ darkMode }) {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -352,6 +353,7 @@ function Hero({ darkMode }) {
                       : "border-[#EAE2D6] bg-[#FFFDF7]/90"
                   }
                 `}
+                aria-hidden="true"
               >
                 <p
                   className={`
